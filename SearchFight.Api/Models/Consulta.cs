@@ -8,7 +8,7 @@ namespace SearchFight.Api.Models
     public class Consulta
     {
         public int id_consulta { get; set; } = 0;
-        public string engine { get; set; } = "";
+        public string engine { get; set; } = " ";
         public string lenguaje { get; set; } = "";
 
         public int resultado { get; set; } = 0;
