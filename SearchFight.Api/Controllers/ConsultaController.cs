@@ -10,6 +10,8 @@ using SearchFight.Api.Utilities;
 
 namespace SearchFight.Api.Controllers
 {
+    //[ApiController]
+    //[Route("api/[controller]")]
     public class ConsultaController : ControllerBase
     {
         private readonly IWebHostEnvironment _host;
@@ -30,15 +32,15 @@ namespace SearchFight.Api.Controllers
         string random_str = "";
 
         // GET api/values
-        [HttpGet("{engine}/{language_value}")]
-        public ActionResult<List<Consulta>> Get(int engine , string language_value)
+        [HttpGet("{language_value}")]
+        public ActionResult<List<Consulta>> Get(string language_value)
         {
             random_str = ru.RandomString(8) + "|" + ru.CurrentDate();
 
             try
             {
 
-                lista = con.Consulta(engine, language_value);
+                lista = con.Consulta( language_value);
             }
             catch (Exception e)
             {             

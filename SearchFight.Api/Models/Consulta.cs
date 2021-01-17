@@ -9,7 +9,7 @@ namespace SearchFight.Api.Models
     {
         public int id_consulta { get; set; } = 0;
         public string engine { get; set; } = " ";
-        public string lenguaje { get; set; } = "";
+        public string language { get; set; } = "";
 
         public int resultado { get; set; } = 0;
     }
