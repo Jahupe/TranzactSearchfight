@@ -22,7 +22,6 @@ namespace SearchFight.Api.Connection
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Procedures.sp_listar_consulta_engine, cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.Add("@engine", SqlDbType.Int).Value = engine;
                 cmd.Parameters.Add("@language_value", SqlDbType.VarChar).Value = language_value;
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -40,8 +39,7 @@ namespace SearchFight.Api.Connection
                 }
             }
             catch (Exception e)
-            {
-                //LOG.registrarLog("(Excepcion " + random_str + ")[ERROR]->[ReporteConnection.cs / reporte_nps <> " + e.Message.ToString(), "ERROR", main_path);
+            {              
                 rpta = "Ocurrió un error generar el reporte " + e.Message;
             }
             cn.Close();

@@ -1,0 +1,46 @@
+﻿@model List<Consulta>
+
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Engine</th>
+            <th>Language</th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (Model.Count > 0)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.engine</td>
+                    <td>@item.language</td>
+                    <td>@item.resultado</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3">Sin resultados</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<br />
+@if (Model.Count > 0)
+{
+    <div>
+        <p>El mayor resultado lo tiene <b>@Model[0].engine</b> con <b>@Model[0].resultado</b></p>
+    </div>
+}
+
+<br />
+<br />
+<button type="button" class="btn btn-primary" onclick="window.history.back()">Volver</button>

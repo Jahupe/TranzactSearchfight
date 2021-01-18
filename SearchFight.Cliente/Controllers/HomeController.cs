@@ -20,7 +20,10 @@ namespace SearchFight.Cliente.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            dynamic obj = new System.Dynamic.ExpandoObject();
+            string path = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+            obj.path = path;
+            return View("Index", obj);
         }
 
         public IActionResult Privacy()

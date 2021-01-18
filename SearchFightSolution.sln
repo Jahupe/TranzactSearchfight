@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchFight.Api", "SearchFight.Api\SearchFight.Api.csproj", "{15095FDA-E9F9-4C09-AAC2-11AC23128205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchFight.Cliente", "SearchFight.Cliente\SearchFight.Cliente.csproj", "{53799F0B-53B2-49D0-A5C0-457868F6FA24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchFight.Cliente", "SearchFight.Cliente\SearchFight.Cliente.csproj", "{53799F0B-53B2-49D0-A5C0-457868F6FA24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

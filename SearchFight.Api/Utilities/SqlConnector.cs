@@ -67,7 +67,7 @@ namespace SearchFight.Api.Utilities
             catch (Exception e)
             {
                 throw new ArgumentException(e.Message.ToString());
-                Console.Write(e.Message.ToString());
+
             }
 
         }
@@ -120,7 +120,6 @@ namespace SearchFight.Api.Utilities
 
         public static string getConnectionString()
         {
-            //return ConfigurationManager.ConnectionStrings["cnx_sql"].ConnectionString;
             return Constantes.cnx_sql;
         }
 

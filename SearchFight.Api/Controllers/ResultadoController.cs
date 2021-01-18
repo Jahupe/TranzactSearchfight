@@ -33,7 +33,7 @@ namespace SearchFight.Api.Controllers
         List<Consulta> lista = new List<Consulta>();
 
         string random_str = "";
-        // GET: api/<ResultadoController>
+
         [HttpGet]
         public IEnumerable<string> Get()
         {
@@ -47,12 +47,11 @@ namespace SearchFight.Api.Controllers
 
             try
             {
-
                 lista = con.Consulta(language_value);
             }
             catch (Exception e)
             {
-                //LOG.registrarLog("(Output " + random_str + ")[DATA]->[MenuController.cs / listar_menu <> json_error: " + JsonConvert.SerializeObject(oRespuesta), "TRANSAC", main_path);
+
             }
             return lista;
         }
@@ -62,19 +61,16 @@ namespace SearchFight.Api.Controllers
             return "value";
         }
 
-        // POST api/<ResultadoController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<ResultadoController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<ResultadoController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
